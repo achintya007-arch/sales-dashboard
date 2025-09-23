@@ -1,0 +1,257 @@
+order_id,order_date,product_name,quantity,price
+1,2025-01-05,Wireless Headphones,2,500
+2,2025-01-05,Smartwatch,1,300
+3,2025-01-06,Wireless Headphones,3,500
+4,2025-01-06,Portable Speaker,5,200
+5,2025-01-07,Laptop,2,1500
+6,2025-01-07,Smartwatch,4,300
+7,2025-01-08,Wireless Headphones,1,500
+8,2025-01-08,Gaming Mouse,6,250
+9,2025-01-09,Portable Speaker,3,200
+10,2025-01-09,Laptop,1,1500
+11,2025-01-10,Keyboard,2,800
+12,2025-01-11,Wireless Headphones,4,500
+13,2025-01-11,Smartwatch,2,300
+14,2025-01-12,Gaming Mouse,3,250
+15,2025-01-13,Keyboard,1,800
+16,2025-01-14,Portable Speaker,7,200
+17,2025-01-15,Wireless Headphones,5,500
+18,2025-01-15,Laptop,2,1500
+19,2025-01-16,Smartwatch,6,300
+20,2025-01-16,Gaming Mouse,4,250
+21,2025-02-02,Wireless Headphones,3,500
+22,2025-02-03,Smartwatch,5,300
+23,2025-02-05,Portable Speaker,2,200
+24,2025-02-06,Laptop,1,1500
+25,2025-02-07,Gaming Mouse,7,250
+26,2025-02-08,Keyboard,2,800
+27,2025-02-10,Wireless Headphones,4,500
+28,2025-02-12,Smartwatch,3,300
+29,2025-02-13,Portable Speaker,6,200
+30,2025-02-14,Laptop,2,1500
+31,2025-02-15,Gaming Mouse,5,250
+32,2025-02-16,Keyboard,1,800
+33,2025-02-18,Wireless Headphones,2,500
+34,2025-02-19,Smartwatch,4,300
+35,2025-02-20,Portable Speaker,3,200
+36,2025-02-22,Laptop,1,1500
+37,2025-02-23,Gaming Mouse,6,250
+38,2025-02-24,Keyboard,2,800
+39,2025-03-01,Wireless Headphones,5,500
+40,2025-03-02,Smartwatch,2,300
+41,2025-03-03,Portable Speaker,4,200
+42,2025-03-04,Laptop,3,1500
+43,2025-03-05,Gaming Mouse,1,250
+44,2025-03-06,Keyboard,2,800
+45,2025-03-07,Wireless Headphones,6,500
+46,2025-03-08,Smartwatch,5,300
+47,2025-03-09,Portable Speaker,2,200
+48,2025-03-10,Laptop,1,1500
+49,2025-03-11,Gaming Mouse,8,250
+50,2025-03-12,Keyboard,3,800
+51,2025-03-14,Wireless Headphones,4,500
+52,2025-03-15,Smartwatch,7,300
+53,2025-03-16,Portable Speaker,5,200
+54,2025-03-18,Laptop,2,1500
+55,2025-03-19,Gaming Mouse,3,250
+56,2025-03-20,Keyboard,1,800
+57,2025-04-06,Webcam,6,1000
+58,2025-01-29,Wireless Headphones,8,500
+59,2025-02-01,External SSD,1,700
+60,2025-04-05,Gaming Mouse,3,250
+61,2025-01-21,USB-C Hub,7,450
+62,2025-01-27,Laptop,2,1500
+63,2025-04-16,External SSD,8,700
+64,2025-01-09,Smartwatch,5,300
+65,2025-03-18,Wireless Headphones,6,500
+66,2025-01-19,Keyboard,2,800
+67,2025-04-08,Smartwatch,5,300
+68,2025-02-05,Monitor,1,1200
+69,2025-03-09,External SSD,8,700
+70,2025-03-23,Smartwatch,4,300
+71,2025-01-13,Keyboard,7,800
+72,2025-05-01,External SSD,6,700
+73,2025-03-02,USB-C Hub,5,450
+74,2025-01-05,USB-C Hub,1,450
+75,2025-03-12,Gaming Mouse,8,250
+76,2025-03-28,Keyboard,6,800
+77,2025-01-29,Keyboard,3,800
+78,2025-03-09,USB-C Hub,8,450
+79,2025-03-17,Webcam,5,1000
+80,2025-01-30,USB-C Hub,2,450
+81,2025-03-22,Wireless Headphones,7,500
+82,2025-01-19,Gaming Mouse,7,250
+83,2025-04-25,USB-C Hub,2,450
+84,2025-01-10,Gaming Mouse,1,250
+85,2025-03-18,Portable Speaker,7,200
+86,2025-01-11,External SSD,7,700
+87,2025-04-14,Webcam,8,1000
+88,2025-02-05,External SSD,2,700
+89,2025-03-13,Smartwatch,7,300
+90,2025-04-07,Smartwatch,8,300
+91,2025-03-19,Webcam,3,1000
+92,2025-04-29,Laptop,1,1500
+93,2025-04-17,Wireless Headphones,3,500
+94,2025-03-13,Smartwatch,5,300
+95,2025-02-11,Monitor,2,1200
+96,2025-01-13,Smartwatch,1,300
+97,2025-04-13,Laptop,4,1500
+98,2025-03-13,Monitor,6,1200
+99,2025-01-29,Laptop,3,1500
+100,2025-02-18,Monitor,6,1200
+101,2025-04-18,Monitor,5,1200
+102,2025-04-17,Smartwatch,2,300
+103,2025-01-20,Keyboard,4,800
+104,2025-02-06,Smartwatch,3,300
+105,2025-03-20,USB-C Hub,2,450
+106,2025-01-11,Wireless Headphones,4,500
+107,2025-04-07,Laptop,8,1500
+108,2025-03-28,External SSD,8,700
+109,2025-02-12,Wireless Headphones,2,500
+110,2025-04-20,External SSD,2,700
+111,2025-02-27,Portable Speaker,5,200
+112,2025-03-26,External SSD,3,700
+113,2025-01-15,Monitor,6,1200
+114,2025-01-30,Wireless Headphones,2,500
+115,2025-02-01,Keyboard,8,800
+116,2025-03-16,Smartwatch,7,300
+117,2025-03-14,Keyboard,6,800
+118,2025-04-26,Wireless Headphones,7,500
+119,2025-01-26,Gaming Mouse,2,250
+120,2025-03-16,USB-C Hub,6,450
+121,2025-02-22,Portable Speaker,3,200
+122,2025-01-20,Webcam,6,1000
+123,2025-03-12,Laptop,4,1500
+124,2025-03-08,External SSD,5,700
+125,2025-01-03,Keyboard,4,800
+126,2025-01-26,Monitor,4,1200
+127,2025-01-26,Gaming Mouse,3,250
+128,2025-03-14,Monitor,5,1200
+129,2025-02-08,USB-C Hub,6,450
+130,2025-04-12,Gaming Mouse,7,250
+131,2025-04-27,Monitor,5,1200
+132,2025-01-04,Keyboard,5,800
+133,2025-01-25,Smartwatch,6,300
+134,2025-01-30,Smartwatch,1,300
+135,2025-03-14,Webcam,5,1000
+136,2025-03-15,Webcam,4,1000
+137,2025-01-01,USB-C Hub,7,450
+138,2025-03-19,Webcam,8,1000
+139,2025-01-21,Keyboard,4,800
+140,2025-03-24,Keyboard,1,800
+141,2025-04-22,Keyboard,6,800
+142,2025-03-31,Monitor,6,1200
+143,2025-03-10,Gaming Mouse,8,250
+144,2025-02-15,Monitor,5,1200
+145,2025-01-25,Wireless Headphones,4,500
+146,2025-04-27,Smartwatch,4,300
+147,2025-04-22,USB-C Hub,2,450
+148,2025-01-18,Portable Speaker,4,200
+149,2025-02-12,Webcam,2,1000
+150,2025-04-11,Laptop,8,1500
+151,2025-01-28,USB-C Hub,2,450
+152,2025-01-14,Laptop,7,1500
+153,2025-04-14,Monitor,6,1200
+154,2025-02-25,Webcam,6,1000
+155,2025-03-04,External SSD,2,700
+156,2025-04-24,Keyboard,3,800
+157,2025-04-30,Portable Speaker,3,200
+158,2025-02-26,Gaming Mouse,5,250
+159,2025-02-17,Laptop,2,1500
+160,2025-02-08,Laptop,2,1500
+161,2025-03-08,Gaming Mouse,7,250
+162,2025-03-07,Gaming Mouse,3,250
+163,2025-01-26,Smartwatch,1,300
+164,2025-03-31,Smartwatch,2,300
+165,2025-01-12,Wireless Headphones,8,500
+166,2025-03-23,Portable Speaker,4,200
+167,2025-02-20,Smartwatch,4,300
+168,2025-02-02,Keyboard,3,800
+169,2025-03-23,Gaming Mouse,5,250
+170,2025-01-26,Monitor,5,1200
+171,2025-04-13,Gaming Mouse,4,250
+172,2025-03-26,Webcam,3,1000
+173,2025-04-13,Smartwatch,8,300
+174,2025-01-18,Smartwatch,8,300
+175,2025-03-01,External SSD,2,700
+176,2025-02-19,Keyboard,3,800
+177,2025-01-01,Gaming Mouse,3,250
+178,2025-04-06,External SSD,8,700
+179,2025-01-17,Portable Speaker,5,200
+180,2025-04-15,Wireless Headphones,1,500
+181,2025-01-01,Wireless Headphones,8,500
+182,2025-03-27,Wireless Headphones,4,500
+183,2025-01-21,Gaming Mouse,8,250
+184,2025-02-13,External SSD,4,700
+185,2025-02-27,External SSD,2,700
+186,2025-02-24,Portable Speaker,8,200
+187,2025-01-19,Laptop,6,1500
+188,2025-02-06,Keyboard,4,800
+189,2025-03-23,Gaming Mouse,2,250
+190,2025-02-20,Laptop,4,1500
+191,2025-01-16,Smartwatch,5,300
+192,2025-04-30,Portable Speaker,6,200
+193,2025-03-28,Wireless Headphones,5,500
+194,2025-03-04,Portable Speaker,7,200
+195,2025-01-12,Laptop,1,1500
+196,2025-04-09,Laptop,5,1500
+197,2025-02-10,External SSD,1,700
+198,2025-01-06,Smartwatch,3,300
+199,2025-01-13,Portable Speaker,2,200
+200,2025-04-02,Keyboard,1,800
+201,2025-01-24,Keyboard,5,800
+202,2025-01-21,Wireless Headphones,6,500
+203,2025-04-16,Laptop,8,1500
+204,2025-04-23,Laptop,1,1500
+205,2025-01-28,Smartwatch,4,300
+206,2025-02-22,Wireless Headphones,8,500
+207,2025-04-17,Monitor,5,1200
+208,2025-02-14,USB-C Hub,7,450
+209,2025-03-10,Laptop,5,1500
+210,2025-02-03,USB-C Hub,7,450
+211,2025-03-09,Wireless Headphones,1,500
+212,2025-02-28,Smartwatch,5,300
+213,2025-04-24,Wireless Headphones,5,500
+214,2025-02-02,Webcam,6,1000
+215,2025-01-14,Smartwatch,7,300
+216,2025-04-03,Wireless Headphones,1,500
+217,2025-03-27,Wireless Headphones,8,500
+218,2025-02-19,Keyboard,2,800
+219,2025-01-21,Portable Speaker,6,200
+220,2025-03-04,USB-C Hub,6,450
+221,2025-03-24,Webcam,1,1000
+222,2025-04-19,Laptop,4,1500
+223,2025-02-06,Laptop,1,1500
+224,2025-03-01,Gaming Mouse,5,250
+225,2025-02-13,Gaming Mouse,5,250
+226,2025-02-20,Gaming Mouse,2,250
+227,2025-01-06,Portable Speaker,6,200
+228,2025-01-27,Smartwatch,2,300
+229,2025-03-18,Wireless Headphones,4,500
+230,2025-04-29,Portable Speaker,6,200
+231,2025-04-05,Keyboard,5,800
+232,2025-02-26,Gaming Mouse,2,250
+233,2025-03-14,Portable Speaker,2,200
+234,2025-01-12,USB-C Hub,8,450
+235,2025-04-25,Keyboard,1,800
+236,2025-04-25,External SSD,3,700
+237,2025-03-20,Portable Speaker,6,200
+238,2025-03-23,Laptop,2,1500
+239,2025-01-13,Smartwatch,2,300
+240,2025-02-27,Portable Speaker,3,200
+241,2025-01-20,Webcam,7,1000
+242,2025-01-03,Wireless Headphones,4,500
+243,2025-01-03,Wireless Headphones,8,500
+244,2025-02-21,Laptop,4,1500
+245,2025-04-29,USB-C Hub,1,450
+246,2025-03-13,USB-C Hub,1,450
+247,2025-02-07,Wireless Headphones,6,500
+248,2025-01-18,USB-C Hub,5,450
+249,2025-03-20,Webcam,1,1000
+250,2025-03-26,Laptop,6,1500
+251,2025-04-04,Portable Speaker,2,200
+252,2025-03-16,Wireless Headphones,4,500
+253,2025-02-07,Smartwatch,3,300
+254,2025-01-23,Gaming Mouse,7,250
+255,2025-01-19,Portable Speaker,5,200
+256,2025-04-20,Laptop,7,1500
