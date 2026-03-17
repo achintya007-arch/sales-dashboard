@@ -1,28 +1,30 @@
 import pandas as pd
 import mysql.connector
 from mysql.connector import Error
+from config import DB_CONFIG   # ⭐ NEW
 
-def get_connection(host, user, password, database):
+TABLE_NAME = "sales_data"
+
+def get_connection():
     return mysql.connector.connect(
-        host=host,
+        host=DB_CONFIG["host"],
         port=3306,
-        user=user,
-        password=password,
-        database=database,
+        user=DB_CONFIG["user"],
+        password=DB_CONFIG["password"],
+        database=DB_CONFIG["database"],
         ssl_disabled=False
     )
 
-def import_csv_to_mysql(csv_file, host, user, password, database):
+def import_csv_to_mysql(csv_file):
     df = pd.read_csv(csv_file)
 
     conn = None
     try:
-        conn = get_connection(host, user, password, database)
+        conn = get_connection()
         cursor = conn.cursor()
 
-        # create table if not exists
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS sales_data (
+        cursor.execute(f"""
+            CREATE TABLE IF NOT EXISTS {TABLE_NAME} (
                 order_id INT PRIMARY KEY,
                 order_date DATE,
                 product_name VARCHAR(255),
@@ -32,11 +34,9 @@ def import_csv_to_mysql(csv_file, host, user, password, database):
         """)
         conn.commit()
 
-        # clear old data
-        cursor.execute("DELETE FROM sales_data")
+        cursor.execute(f"DELETE FROM {TABLE_NAME}")
         conn.commit()
 
-        # prepare rows for batch insert
         rows = []
         for _, row in df.iterrows():
             rows.append((
@@ -47,14 +47,16 @@ def import_csv_to_mysql(csv_file, host, user, password, database):
                 float(row['price'])
             ))
 
-        insert_sql = """INSERT INTO sales_data 
+        insert_sql = f"""INSERT INTO {TABLE_NAME}
                         (order_id, order_date, product_name, quantity, price)
                         VALUES (%s, %s, %s, %s, %s)"""
+
         if rows:
             cursor.executemany(insert_sql, rows)
             conn.commit()
 
         print("✅ Data imported into MySQL successfully!")
+
     except Error as e:
         print("MySQL error during import:", e)
         raise
@@ -62,11 +64,11 @@ def import_csv_to_mysql(csv_file, host, user, password, database):
         if conn:
             conn.close()
 
-def load_data_from_mysql(host, user, password, database):
+def load_data_from_mysql():
     conn = None
     try:
-        conn = get_connection(host, user, password, database)
-        df = pd.read_sql("SELECT * FROM sales_data", conn, parse_dates=["order_date"]) # type: ignore
+        conn = get_connection()
+        df = pd.read_sql(f"SELECT * FROM {TABLE_NAME}", conn, parse_dates=["order_date"]) #type: ignore
         return df
     except Error as e:
         print("MySQL error during load:", e)

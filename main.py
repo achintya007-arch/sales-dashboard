@@ -1,7 +1,10 @@
-from config import CSV_FILE, HOST, USER, PASSWORD, DATABASE
+from config import DB_CONFIG
 from db_utils import import_csv_to_mysql, load_data_from_mysql
 from analysis import generate_insights
 import visualization as viz
+
+# Static config (not sensitive)
+CSV_FILE = "sales.csv"
 
 def main():
     while True:
@@ -15,21 +18,24 @@ def main():
 
         if choice == "1":
             try:
-                import_csv_to_mysql(CSV_FILE, HOST, USER, PASSWORD, DATABASE)
+                import_csv_to_mysql(CSV_FILE)   # DB config handled internally
+                print("✅ CSV imported successfully.")
             except Exception as e:
                 print("Error during import:", e)
+
         elif choice == "2":
             try:
-                df = load_data_from_mysql(HOST, USER, PASSWORD, DATABASE)
+                df = load_data_from_mysql()     # DB config handled internally
                 if df.empty:
                     print("Database table is empty.")
                 else:
                     print(df.head())
             except Exception as e:
                 print("Error loading data:", e)
+
         elif choice == "3":
             try:
-                df = load_data_from_mysql(HOST, USER, PASSWORD, DATABASE)
+                df = load_data_from_mysql()
                 insights = generate_insights(df)
 
                 print("\n📊 Top Selling Products:\n", insights['top_products'])
@@ -45,9 +51,11 @@ def main():
 
             except Exception as e:
                 print("Error analyzing/visualizing:", e)
+
         elif choice == "4":
             print("👋 Exiting Sales Dashboard. Goodbye!")
             break
+
         else:
             print("❌ Invalid choice. Try again.")
 
