@@ -5,7 +5,6 @@ from db_utils import import_csv_to_mysql, load_data_from_mysql
 from analysis import generate_insights
 import visualization as viz
 
-# --- Page Config ---
 st.set_page_config(
     page_title="Sales Dashboard",
     page_icon="📊",
@@ -13,7 +12,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# --- Custom Styling ---
 st.markdown("""
     <style>
     .block-container {
@@ -32,16 +30,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- Sidebar Menu ---
 st.sidebar.title("⚙️ Navigation")
 menu = ["📈 Overview & Insights", "📋 View Data", "🏠 Import CSV"]
 choice = st.sidebar.radio("Go to", menu)
-
-# --- Header ---
+ 
 st.title("📊 Sales Analytics Dashboard")
 st.markdown("Analyze your sales data quickly with KPIs, trends, and visual insights.")
 
-# --- Helper function to load data safely ---
 @st.cache_data
 def get_data():
     try:
@@ -52,14 +47,14 @@ def get_data():
 
 df = get_data()
 
-# --- 1️⃣ Overview & Insights ---
+# Overview & Insights 
 if choice == "📈 Overview & Insights":
     st.header("📊 Sales Overview & KPIs")
     
     if df.empty:
         st.warning("⚠️ No data available. Please import CSV first.")
         st.info("You can still see placeholder KPIs and charts below.")
-        # Placeholder example metrics
+        
         total_revenue = 50000
         total_orders = 120
         avg_order_value = total_revenue / total_orders
@@ -73,24 +68,17 @@ if choice == "📈 Overview & Insights":
         top_products = insights['top_products']
         monthly_sales = insights['monthly_sales']
 
-    # --- KPIs ---
+    #  KPIs 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.markdown('<div class="metric-container">', unsafe_allow_html=True)
-        st.metric("💰 Total Revenue", f"${total_revenue:,.2f}")
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.metric("💰 Total Revenue", f"₹{total_revenue:,.2f}")
     with col2:
-        st.markdown('<div class="metric-container">', unsafe_allow_html=True)
         st.metric("🛒 Total Orders", f"{total_orders}")
-        st.markdown("</div>", unsafe_allow_html=True)
     with col3:
-        st.markdown('<div class="metric-container">', unsafe_allow_html=True)
-        st.metric("📦 Avg Order Value", f"${avg_order_value:,.2f}")
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.metric("📦 Avg Order Value", f"₹{avg_order_value:,.2f}")
 
     st.markdown("---")
 
-    # --- Charts ---
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("🏆 Top Selling Products")
@@ -100,7 +88,7 @@ if choice == "📈 Overview & Insights":
         if not df.empty:
             st.bar_chart(insights['peak_days'])
         else:
-            st.bar_chart([5, 10, 7])  # placeholder
+            st.bar_chart([5, 10, 7])
     with col2:
         st.subheader("📈 Monthly Sales Trend")
         st.line_chart(monthly_sales)
@@ -112,7 +100,6 @@ if choice == "📈 Overview & Insights":
         else:
             st.info("Chart will appear after importing data.")
 
-# --- 2️⃣ View Data ---
 elif choice == "📋 View Data":
     st.header("👀 Sales Data Preview")
     if df.empty:
@@ -122,7 +109,6 @@ elif choice == "📋 View Data":
         st.markdown("### Summary Statistics")
         st.dataframe(df.describe())
 
-# --- 3️⃣ Import CSV ---
 elif choice == "🏠 Import CSV":
     st.header("📥 Import CSV to MySQL")
     st.markdown("Upload your sales data to update the database.")
@@ -130,6 +116,6 @@ elif choice == "🏠 Import CSV":
         try:
             import_csv_to_mysql(CSV_FILE, HOST, USER, PASSWORD, DATABASE)
             st.success("✅ Data imported successfully into MySQL!")
-            st.rerun()  # refresh dashboard with new data
+            st.rerun()
         except Exception as e:
             st.error(f"❌ Error: {e}")
